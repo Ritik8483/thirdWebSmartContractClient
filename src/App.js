@@ -1,99 +1,26 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
-import "./styles/Home.css";
+import Home from "./components/Home";
 
-export default function Home() {
+export default function App() {
   return (
-    <main className="main">
-      <div className="container">
-        <div className="header">
-          <h1 className="title">
-            Welcome to{" "}
-            <span className="gradient-text-0">
-              <a
-                href="https://thirdweb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                thirdweb.
-              </a>
-            </span>
-          </h1>
-
-          <p className="description">
-            Get started by configuring your desired network in{" "}
-            <code className="code">src/index.js</code>, then modify the{" "}
-            <code className="code">src/App.js</code> file!
-          </p>
-
-          <div className="connect">
-            <ConnectWallet
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
-            />
-          </div>
-        </div>
-
-        <div className="grid">
-          <a
-            href="https://portal.thirdweb.com/"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/images/portal-preview.png"
-              alt="Placeholder preview of starter"
-            />
-            <div className="card-text">
-              <h2 className="gradient-text-1">Portal ➜</h2>
-              <p>
-                Guides, references, and resources that will help you build with
-                thirdweb.
-              </p>
-            </div>
-          </a>
-
-          <a
-            href="https://thirdweb.com/dashboard"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/images/dashboard-preview.png"
-              alt="Placeholder preview of starter"
-            />
-            <div className="card-text">
-              <h2 className="gradient-text-2">Dashboard ➜</h2>
-              <p>
-                Deploy, configure, and manage your smart contracts from the
-                dashboard.
-              </p>
-            </div>
-          </a>
-
-          <a
-            href="https://thirdweb.com/templates"
-            className="card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/images/templates-preview.png"
-              alt="Placeholder preview of templates"
-            />
-            <div className="card-text">
-              <h2 className="gradient-text-3">Templates ➜</h2>
-              <p>
-                Discover and clone template projects showcasing thirdweb
-                features.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </main>
+    <div>
+      <Home />
+    </div>
   );
 }
+
+//Just make one folder client and In main folder write
+// npx thirdweb@latest create --contract  => ./ => web3 => hardhat => crowdFunding => Empty contract
+// in client side
+//npx thirdweb@latest create --app  => y => ./ => vite => JS
+//sepolia tesnet endpoint
+// https://www.ankr.com/rpc/eth/eth_sepolia/
+//cd web3 and npm run deploy
+//pass contract address and localhost:port in creating api key and check whether you are getting contract address or not
+//https://portal.thirdweb.com/react/react.usemetamask
+//https://thirdweb.com/sepolia/0xe3261c3396fa9C05FfE5AaD9e225863cb670573e/code?environment=react
+// https://www.bing.com/images/create/happy-cartoonish-lion-with-etherium-logo-in-hand/651cfe1f65ea4583b48757de0d9f842d?id=jICX2vaxrl64VTEwY4TaOg%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&ajaxhist=0&ajaxserp=0
+
+// Docs
+// https://github.com/thirdweb-dev/js/tree/main/packages/react
+//https://portal.thirdweb.com/react
